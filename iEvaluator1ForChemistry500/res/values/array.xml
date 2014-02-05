@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty_Name">
+    <item>Foundation</item>
+    <item>Higher</item>
+    <item>Foundation/Higher</item>
+    </string-array>
+    
+    <string-array name="difficulty_values">
+     <item>1</item>
+    <item>3</item>
+    <item>0</item>
+    </string-array>
+    
+    <string-array name="topic_Name">
+    <item>All</item>
+    <item>Acids, bases and salts</item>
+    <item>Alcohols and esters</item>
+    <item>Atoms, elements and compounds</item>
+    <item>Bonding and Structure</item>
+    <item>Building Materials</item>
+    <item>Calculations in chemistry</item>
+    <item>Chemical Reactions</item>
+    <item>Collection of and tests for gases</item>
+    <item>Crude Oil and Fuels</item>
+    <item>Earth and Atmosphere</item>
+    <item>Electrolysis</item>
+    <item>Energy in Reactions</item>
+    <item>Food chemistry</item>
+    <item>Obtaining and using metals</item>
+    <item>Paint</item>
+    <item>Periodic table</item>
+    <item>Qualitative Analysis</item>
+    <item>Quantitative Analysis</item>
+    <item>Rates of reaction</item>
+    <item>Water</item>
+    
+  
+ </string-array>
+    
+    <string-array name="topic_values">
+    <item>0</item>
+     <item>1</item>
+    <item>22</item>
+    <item>25</item>
+    <item>7</item>
+    <item>26</item>
+    <item>6</item>
+    <item>24</item>
+    <item>17</item>
+    <item>19</item>
+    <item>20</item>
+    <item>28</item>
+    <item>27</item>
+    <item>21</item>
+    <item>29</item>
+    <item>23</item>
+    <item>16</item>
+    <item>18</item>
+    <item>30</item>
+    <item>10</item>
+    <item>11</item>
+  	
+    </string-array>
+    
+    
+    <string-array name="typeofquestion_Name">
+    <item>All</item>
+    <item>Descriptive Type</item>
+    <item>Multiple Choice Single Answer</item>
+    <item>Multiple Choice Multiple Answer</item>
+    <item>True or False</item>
+    <item>Yes or No</item>
+    <item>Fill the blanks</item>
+    
+    </string-array>
+    
+    <string-array name="typeofquestion_values">
+    <item>0</item>
+     <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    
+    </string-array>
+    
+   
+</resources>

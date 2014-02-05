@@ -1,0 +1,7 @@
+com.android.ide.eclipse.adt.configmanager.config=500
+com.android.ide.eclipse.adt.configmanager.name=150
+com.android.ide.eclipse.adt.emuOptions=-partition-size 1024
+com.android.ide.eclipse.adt.fixLegacyEditors=1
+com.android.ide.eclipse.adt.sdk=/Users/Joseph/Documents/android-sdk-mac_x86
+com.android.ide.eclipse.adt.xmlEditor=true
+eclipse.preferences.version=1

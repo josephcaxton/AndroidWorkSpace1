@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty_Name">
+    <item>Easy</item>
+    <item>Medium</item>
+    <item>Difficult</item>
+    <item>All</item>
+    </string-array>
+    
+    <string-array name="difficulty_values">
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+       <item>0</item>
+    </string-array>
+    
+    <string-array name="topic_Name">
+    <item>All</item>
+    <item>Inspector Calls</item>
+    <item>Lord of the Flies</item>
+    <item>The Crucible</item>
+    <item>Of Mice and Men</item>
+    <item>To Kill a Mockingbird</item>
+    <item>Romeo and Juliet</item>
+    <item>Macbeth</item>
+    <item>Much Ado about Nothing</item>
+    <item>Pride and Prejudice</item>
+    <item>Great Expectations</item>
+    <item>Animal Farm</item>
+    <item>Figurative Language</item>
+    <item>Persuade and argue Language</item>
+    <item>Informative Language</item>
+    <item>Writing to Advise and Instruct</item>
+    <item>Writing to Explain</item>
+    <item>Grammar</item>
+    <item>Spoken Language</item>
+    <item>Flag by John Agard</item>
+    <item>Out of the Blue extract by Simon Armitage</item>
+    <item>Mametz Wood by Owen Sheers</item>
+    <item>The Yellow Palm by Robert Minhinnick</item>
+    <item>The Right Word by Imtiaz Dharker</item>
+    <item>At the Border by Choman Hardi</item>
+    <item>Belfast Confetti by Ciaran Carson</item>
+    <item>Poppies by Jane Weir</item>
+    <item>Futility by Wilfred Owen</item>
+    <item>The Charge of the Light Brigade by Alfred Tennyson</item>
+    <item>Bayonet Charge by Ted Hughes</item>
+    <item>The Falling Leaves by Margaret Postgate Cole</item>
+    <item>Come On, Come Back by Stevie Smith</item>
+    <item>Next to of course god america i by E. E. Cummings</item>
+    <item>Hawk Roosting by Ted Hughes</item>
+    <item>The Clown Punk by Simon Armitage</item>
+    <item>Horse Whisperer by Andrew Forster</item>
+    <item>Medusa by Carol Ann Duffy</item>
+    <item>Singh Song! by Daljit Nagra</item>
+    <item>Brendon Gallacher by Jackie Kay</item>
+    <item>Give by Simon Armitage</item>
+    <item>Les Grands Seigneurs by Dorothy Molloy</item>
+    <item>Ozymandias by Percy Bysshe Shelley</item>
+    <item>My Last Duchess by Robert Browning</item>
+    <item>The River God by Stevie Smith</item>
+    <item>The Hunchback in the Park by Dylan Thomas</item>
+    <item>The Ruined Maid by Thomas Hardy</item>
+    <item>Casehistory: Alison (head injury) by U. A. Fanthorpe</item>
+    <item>On a Portrait of a Deaf Man by John Betjeman</item>
+    <item>My Polish Teacher’s Tie</item>
+    <item>When the Wasps Drowned</item>
+    <item>Compass and Torch</item>
+    <item>On seeing the 100% Perfect Girl…</item>
+    <item>The Darkness Out There</item>
+    <item>Anil</item>
+    <item>Something Old, Something New</item>
+    <item>Writing to Describe</item>
+    <item>Writing to Persuade</item>
+    <item>Writing to Inform</item>
+    <item>Writing to Advise</item>
+    <item>Writing to Instruct</item>
+   
+    
+  
+ </string-array>
+    
+    <string-array name="topic_values">
+    <item>0</item>
+     <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+    <item>9</item>
+    <item>10</item>
+    <item>11</item>
+    <item>12</item>
+    <item>13</item>
+    <item>14</item>
+    <item>15</item>
+    <item>16</item>
+    <item>17</item>
+    <item>18</item>
+    <item>19</item>
+    <item>20</item>
+    <item>21</item>
+    <item>22</item>
+    <item>23</item>
+    <item>24</item>
+    <item>25</item>
+    <item>26</item>
+    <item>27</item>
+    <item>28</item>
+    <item>29</item>
+    <item>30</item>
+    <item>31</item>
+    <item>32</item>
+    <item>33</item>
+    <item>34</item>
+    <item>35</item>
+    <item>36</item>
+    <item>37</item>
+    <item>38</item>
+    <item>39</item>
+    <item>40</item>
+    <item>41</item>
+    <item>42</item>
+    <item>43</item>
+   
+  	
+    </string-array>
+    
+    
+    <string-array name="typeofquestion_Name">
+    <item>All</item>
+    <item>Descriptive Type</item>
+    <item>Multiple Choice Single Answer</item>
+    <item>True or False</item>
+    <item>Yes or No</item>
+    <item>Fill the blanks</item>
+    
+    </string-array>
+    
+    <string-array name="typeofquestion_values">
+    <item>0</item>
+     <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    
+    
+    </string-array>
+    
+   
+</resources>

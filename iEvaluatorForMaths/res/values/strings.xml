@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">iTest U for Mathematics</string>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="LearnersColor">#CCFFFF</color>
+    <string name="sound">Sound</string>
+    <string name="showanswer">Show Answer</string>
+    
+</resources>

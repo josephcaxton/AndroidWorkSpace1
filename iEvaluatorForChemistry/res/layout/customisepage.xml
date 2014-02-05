@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:id="@+id/LLCustomise" android:gravity="center_horizontal">
+  <ScrollView android:id="@+id/scrollCustomisePg" 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+    >
+    
+       <RelativeLayout
+            android:id="@+id/relativelayoutCustomisepg2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+    <SeekBar android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/seekBarQuestions" 
+    android:contentDescription="How many questions do you want?"  android:layout_margin="10px"></SeekBar>
+    
+    <TextView android:text="" android:id="@+id/TextViewNumberOfQuestions" android:layout_width="wrap_content" android:layout_below="@+id/seekBarQuestions"
+    android:layout_height="wrap_content" android:layout_margin="10px" android:layout_gravity="center" android:textColor="@color/black"></TextView>
+    
+    
+    
+    
+    <TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1"
+    android:shrinkColumns="0"
+    android:layout_margin="10px"
+    android:layout_below="@+id/TextViewNumberOfQuestions"
+    android:id="@+id/TableCustomise"
+    >
+    <TableRow>
+       <TextView android:text="Difficulty" android:id="@+id/lblDifficulty" 
+       		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content" 
+    		android:layout_margin="10px"
+            android:ellipsize="none"
+            android:singleLine="true" android:textSize="12dp" android:textColor="@color/black"/>
+        <TextView android:id="@+id/txtDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10px"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="right" android:textSize="12dp"
+            android:textColor="@color/black"/>
+    </TableRow>
+    <TableRow>
+       <TextView android:text="Topic" android:id="@+id/lblTopic" 
+       		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content" 
+    		android:layout_margin="10px"
+            android:ellipsize="none"
+            android:singleLine="true" android:textSize="12dp"
+            android:textColor="@color/black"/>
+        <TextView android:id="@+id/txtTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10px"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="right" android:textSize="12dp"
+            android:textColor="@color/black"/>
+    </TableRow>
+    <TableRow>
+       <TextView android:text="Type of question" android:id="@+id/lblTypeofQuestion" 
+       		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content" 
+    		android:layout_margin="10px"
+            android:ellipsize="none"
+            android:singleLine="true" android:textSize="12dp"
+            android:textColor="@color/black"/>
+        <TextView android:id="@+id/txtTypeofQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:layout_margin="10px"
+            android:gravity="right"
+            android:singleLine="true" android:textSize="12dp" android:textColor="@color/black"/>
+    </TableRow>
+    
+     <TableRow android:gravity="center">
+    <Button android:layout_width="wrap_content" android:text="Customise" android:layout_height="wrap_content" 
+    android:id="@+id/btnCustomise" android:gravity="center"  ></Button>
+    
+    </TableRow>
+    
+   
+    
+</TableLayout>
+    <Button android:layout_width="120dp" android:text="Start Test" android:layout_height="50dp" 
+    android:id="@+id/btnStartTest"   android:layout_margin="10px" android:layout_centerInParent="true" android:gravity="center" 
+    android:layout_below="@+id/TableCustomise"></Button>
+       
+       <TextView
+      android:id="@+id/textViewFinalAnswer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/btnStartTest"
+     android:layout_centerInParent="true"
+    android:visibility="invisible"/>
+   </RelativeLayout>
+     </ScrollView>
+
+  
+
+</RelativeLayout>

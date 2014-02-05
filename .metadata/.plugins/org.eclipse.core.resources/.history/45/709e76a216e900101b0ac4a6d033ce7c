@@ -1,0 +1,247 @@
+package com.learnersCloud.iEvaluatorForAndroid.Chemistry;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.R.integer;
+import android.app.ActivityGroup;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Bundle;
+import android.text.Html;
+import android.view.Gravity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class MultipleChoiceSingleAnswer extends ActivityGroup implements OnClickListener{
+
+	
+	private static DataBaseHelper myDbHelper;
+	private List<Button> ButtonArray;
+	WebView QuestionHeaderBox;
+	TableLayout Table;
+	String Question;
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.multiplechoicesingleanswer);
+		
+		QuestionHeaderBox =(WebView)findViewById(R.id.QuestionHeaderBox);
+		Table =(TableLayout)findViewById(R.id.Qtable);
+		
+		View LLView = findViewById(R.id.LLMultipleSingle);
+		View root = LLView.getRootView();
+		root.setBackgroundColor(Color.BLACK);
+		
+		WebSettings websettings = QuestionHeaderBox.getSettings();
+		websettings.setJavaScriptEnabled(true);
+		websettings.setSavePassword(false);
+        websettings.setSaveFormData(false);
+        websettings.setSupportZoom(true);
+
+		
+		Bundle getBasket = getIntent().getExtras();
+		Integer _id = getBasket.getInt("_id");
+		
+		/*Toast.makeText(getBaseContext(),
+	               String.valueOf(String.valueOf(_id)),
+	                Toast.LENGTH_LONG).show(); */
+		GetQuestion(_id);
+		GetAnswers(_id);
+		
+		
+		
+		
+	}
+	
+	
+
+	
+	
+	private void GetAnswers(Integer _id) {
+		
+		openDatabaseConnection();
+		
+		String WhereStatement = "QUESTIONITEM " + "= " + String.valueOf(_id);
+		String[] Columns = {"CORRECT","ANSWERTEXT","REASON"};
+		
+		Cursor c = myDbHelper.query("ANSWERS", Columns,
+				WhereStatement, null, null, null, null);
+		
+			if (c.getCount() > 0){
+			
+				c.moveToFirst();
+			
+				List<Answer> list = new ArrayList<Answer>();
+				do{
+					Answer ans = new Answer();
+					ans.set_Correct(c.getInt(c.getColumnIndex("CORRECT")));
+					ans.set_AnswerText(c.getString(c.getColumnIndex("ANSWERTEXT")));
+					ans.set_Reason(c.getString(c.getColumnIndex("REASON")));
+					list.add(ans);
+				}
+
+				while (c.moveToNext());
+				
+				// Initialize button array 
+				ButtonArray = new ArrayList<Button>();
+				
+				 for (int current = 0; current < list.size(); current++)
+			        {
+					 Answer ThisAns = list.get(current);
+					 // Create a table row 
+					 TableRow tr = new TableRow(this);
+					 tr.setId(1000+current);
+					 tr.setGravity(Gravity.CENTER);
+					 
+					 tr.setLayoutParams(new LayoutParams(
+			                    LayoutParams.FILL_PARENT,
+			                    LayoutParams.FILL_PARENT));
+					
+					 
+					
+			        
+			         /*TextView Tv = new TextView(this);
+			         Tv.setId(1000+current);
+			         Tv.setText(Html.fromHtml(ThisAns.get_AnswerText()));
+			         Tv.setTextColor(Color.WHITE);
+			         
+			            tr.addView(Tv);
+			            
+			            Table.addView(tr);*/
+					 
+					 
+					 // Configure each button and add to row and then add row to table
+					 Button bt = new Button(this);
+					 bt.setId(1000+current);
+					 bt.setText(Html.fromHtml(ThisAns.get_AnswerText()));
+					 bt.setTextColor(Color.BLACK);
+					 bt.setGravity(Gravity.CENTER);
+					 bt.setWidth(420);
+					 bt.setHeight(LayoutParams.FILL_PARENT);
+					 bt.setTextSize(10);
+					 // Add the correct answer to the button
+					 bt.setTag(ThisAns.get_Correct());
+					 
+					 bt.setOnClickListener(this);
+					 // Add button the button array
+					 ButtonArray.add(bt);
+					 
+					 tr.addView(bt);
+			            
+			            Table.addView(tr);
+					 
+			        }
+				
+				}
+			c.close();
+			myDbHelper.close();
+				
+		}
+	
+
+
+
+
+
+	private void GetQuestion(Integer _id) {
+		
+
+		openDatabaseConnection();
+		
+		String WhereStatement = "_id " + "= " + String.valueOf(_id);
+		String[] Columns = {"QUESTION"};
+		
+		Cursor c = myDbHelper.query("QUESTIONITEMS", Columns,
+				WhereStatement, null, null, null, null);
+		
+		
+		if (c.getCount() > 0){
+			
+			c.moveToPosition(0);
+			
+			Question =  c.getString(0);
+			
+			 }
+		//file remove extension
+		String TrimmedQuestion = Question.subSequence(0, Question.lastIndexOf('.')).toString();
+		
+		Uri path = Uri.parse("file:///android_asset/QImages/" + TrimmedQuestion + ".jpeg");
+	    String HTML = "<img src=\"" + path.toString() + "\"" + " width=\"100%\"" + " />";
+	    
+	    final String mimeType = "text/html";
+	    final String encoding = "utf-8";
+
+		
+		QuestionHeaderBox.loadDataWithBaseURL("fakeit://not required", HTML, mimeType, encoding, null);
+		
+		//QuestionHeaderBox.getSettings().setInitialScale(75);
+		c.close();
+		myDbHelper.close();
+		
+	}
+
+
+
+
+
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		Main parentActivity = (Main)getParent();
+		parentActivity.onBackPressed();
+	}
+
+
+
+
+
+	public void onClick(View v) {
+		
+		// Check if the answer is correct or not
+		if(Integer.parseInt(v.getTag().toString()) == 1){
+			
+			Toast.makeText(getBaseContext(),
+		               String.valueOf(v.getTag() + "is the answer"),
+		                Toast.LENGTH_LONG).show(); 
+			
+		}
+		else
+			
+		{
+			
+			
+		}
+		
+	}
+	
+	private void openDatabaseConnection() {
+		myDbHelper = new DataBaseHelper(getBaseContext());
+		
+		try {
+			
+			myDbHelper.openDataBase();
+			
+	 
+		}catch(SQLException sqle){
+	 
+			throw sqle;
+	 
+		}
+	}
+
+}

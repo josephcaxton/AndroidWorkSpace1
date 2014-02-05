@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:id="@+id/LLHelpPage">
+    
+    <ScrollView android:id="@+id/scrollHelpPage" 
+     android:layout_width="match_parent"
+     android:layout_height="match_parent" >
+    
+     <RelativeLayout
+            android:id="@+id/relativelayoutHelpPage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        
+         <VideoView
+        android:id="@+id/videoHelpView2"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp" 
+        android:gravity="center" />
+   
+   <ProgressBar
+       android:id="@+id/HelpVideoprogressBar"
+       style="?android:attr/progressBarStyleLarge"
+       android:layout_width="60dp"
+       android:layout_height="60dp" android:indeterminate="true" 
+       android:layout_gravity="center" android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+   
+   <TextView
+       android:id="@+id/txtHelpAd"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/videoHelpView2"
+       android:layout_marginLeft="16dp"
+       android:layout_marginTop="4dp"
+       android:text="" />
+
+  
+         
+          </RelativeLayout>
+         </ScrollView>
+         <Button
+       android:id="@+id/btnHelpPage"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentRight="true" android:layout_alignParentBottom="true"
+      
+       android:text="Click to download and view help video" />
+</RelativeLayout>

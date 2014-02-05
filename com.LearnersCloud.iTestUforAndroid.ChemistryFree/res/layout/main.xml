@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:padding="4dip" android:gravity="center_horizontal" android:id="@+id/LLMainPage">
+
+ <ScrollView android:id="@+id/scrollMainPg" 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+    >
+     
+     <RelativeLayout
+            android:id="@+id/relativelayoutMainpg2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+ 
+	<TextView android:text="GCSE Chemistry Free Version"
+		android:id="@+id/txtMainpgVersion" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textColor="@color/black">
+	</TextView>
+		
+	<ImageView android:layout_height="wrap_content" android:id="@+id/imgLearners" 
+		android:layout_width="fill_parent" android:src="@drawable/splash"
+		android:layout_centerVertical="true" android:layout_below="@+id/txtMainpgVersion">
+		</ImageView>
+		
+	<Button android:text="Start Practice Questions Here !"
+		android:id="@+id/btnStartPractice" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_below="@+id/imgLearners">
+	</Button>
+	
+	</RelativeLayout>
+		
+	 </ScrollView>
+	
+		
+	
+
+
+
+
+
+
+</RelativeLayout>
